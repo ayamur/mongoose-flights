@@ -8,6 +8,7 @@ import './config/database.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
+
 import { router as flightsRouter } from './routes/flights.js'
 
 // set up app
