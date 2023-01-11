@@ -1,0 +1,21 @@
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/flights" method="POST">
+    <label for="airline-input">Airline:</label>
+    <input type="text" name="title" id="airline-input">
+    <label for="flight-number-input">Flight Number:</label>
+    <input type="text" name="flightNumber" id="flight-number-input">
+    <label for="airport-select">Airport:</label>
+    <select name="airportSelect" id="airport-select">
+      <option value="HLS">HLS - Milky Way Galaxy Sun (Helios)</option>
+      <option value="GN-z11">GN z11 - The Ursa Major Constellation Galaxy</option>
+      <option value="E616"> E616 - Planet Earth in Galaxy Milky Way 616</option>
+      <option value="VLHL">Valhalla - Hall of the Chosen Dead within Asgard</option>
+      <option value="HDS0">Hades - Dimension of the Greek Underworld</option>
+      <option value="TRNN">Tír na nÓg - Celtic Otherworld</option>
+    </select>
+    <label for="departs-date-input">Departure Date:</label>
+    <input type="text" name="departs" id="departs-date-input" >
+    <button type="submit">Add Flight</button>
+  </form>
+</main>
