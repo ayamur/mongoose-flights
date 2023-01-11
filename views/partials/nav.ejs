@@ -1,10 +1,15 @@
 </head>
 <body>
   <nav>
-		<i class="fa-thin fa-spaghetti-monster-flying-2x"></i>
+		<i class="fa-thin fa-spaghetti-monster-flying"></i>
     <a 
       href="/flights/" <%- title === 'All Flights' ? 'class="active"' : '' %>
     >
       Find Flights
+    </a>
+    <a 
+      href="/flights/new/" <%- title === 'New Flights' ? 'class="active"' : '' %>
+    >
+      Add Flights
     </a>
   </nav>

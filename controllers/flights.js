@@ -1,16 +1,10 @@
 import { Flight } from "../models/flight.js"
 
-function newFlight(req, res) {
-  res.render("flights/new", {
-    title: "Add Flight"
-  })
-}
-
 function index(req, res) {
   Flight.find({})
-  .then(flights => {
+  .then(flight => {
     res.render('flights/index', {
-      movies,
+      flights,
       title: "All Flights",
     })
   })
@@ -20,7 +14,29 @@ function index(req, res) {
   })
 }
 
+function newFlight(req, res) {
+  res.render("flights/new", {
+    title: "Add Flight"
+  })
+}
+
+function create(req, res) {
+  for (const key in req.body) {
+    if(req.body[key] === "") delete req.body[key]
+  }
+  Flight.create(req.body)
+  .then(flight => {
+    console.log(movie);
+    res.redirect("/flights")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/flights")
+  })
+}
+
 export {
   index,
   newFlight as new,
+  create,
 }
