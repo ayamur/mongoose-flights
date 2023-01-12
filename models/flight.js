@@ -35,7 +35,8 @@ const flightSchema = new mongoose.Schema({
     min: 2023,
     required: true,
   },
-  tickets: [ticketSchema]
+  tickets: [ticketSchema],
+  meals: [{ type: Schema.Types.ObjectId, ref: 'Meal' }]
 }, {
   timestamps: true
 })
