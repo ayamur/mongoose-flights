@@ -1,19 +1,15 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/movies/show.css" />
+<link rel="stylesheet" href="/stylesheets/flights/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %></h1>
   <section>
     <div>Flight Details: </div>
-    <div>Airline: </div>
-    <div><%= flight.airline %></div>
-    <div>Airport: </div>
-    <div><%= flight.airport %></div>
-    <div>Flight Number: </div>
-    <div><%= flight.flightNo %></div>
-    <div>Departure Date: </div>
-    <div><%= flight.departs %></div>
+    <div>Airline: <%= flight.airline %></div>
+    <div>Airport: <%= flight.airport %></div>
+    <div>Flight Number: <%= flight.flightNo %></div>
+    <div>Departure Date: <%= flight.departs %></div>
     <a href="/flights/<%= flight._id %>/edit">
       <button>Edit Flight</button>
     </a>

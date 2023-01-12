@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const flightSchema = new mongoose.Schema({
   airline: {
     type: String,
-    enum: ['American', 'Southwest', 'United', 'Spaghetti', 'Styx', 'T.A.R.D.I.S', 'Aranae', 'Airpline']
+    enum: ['American', 'Southwest', 'United', 'Spaghetti', 'Styx', 'TARDIS', 'Aranae', 'Airpline']
   },
   airport: {
     type: String, 

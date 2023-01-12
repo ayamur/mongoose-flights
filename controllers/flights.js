@@ -63,7 +63,7 @@ function show(req, res) {
 function edit(req, res) {
   Flight.findById(req.params.id)
   .then(flight => {
-    res.render("movies/edit", {
+    res.render("flights/edit", {
       flight: flight,
       title: "Edit Flight"
     })
@@ -75,7 +75,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    if(req.body[key] === "") delete req.body[key]
   Flight.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(flight => {
     res.redirect(`/flights/${flight._id}`)
