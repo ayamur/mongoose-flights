@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/new.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/meals" method="POST">
+    <label for="meal-select">Meal:</label>
+    <select>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Meal</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %> 
