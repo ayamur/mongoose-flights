@@ -17,7 +17,7 @@ body {
   background-color: gray;
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
-  color: #424748;
+  color: #0026ff;
   min-height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -42,7 +42,7 @@ body > main h1:first-child {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: #340064;
   display: flex;
   justify-content: flex-end;
   align-items: center;

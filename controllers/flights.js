@@ -1,11 +1,31 @@
 import { Flight } from "../models/flight.js"
 
+function newFlight(req, res) {
+  res.render('flights/new', {
+    title: "Add Flight"
+  })
+}
+
+function create(req, res) {
+  for ( let key in req.body) {
+    if ( req.body[key] === '') delete req.body[key]
+  }
+  Flight.create(req.body)
+  .then(flight => {
+    res.redirect('/flights')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/flights')
+  })
+}
+
 function index(req, res) {
   Flight.find({})
-  .then(flight => {
+  .then(flights => {
     res.render('flights/index', {
       flights,
-      title: "All Flights",
+      title: "All Flights"
     })
   })
   .catch(err => {
@@ -14,29 +34,23 @@ function index(req, res) {
   })
 }
 
-function newFlight(req, res) {
-  res.render("flights/new", {
-    title: "Add Flight"
-  })
-}
-
-function create(req, res) {
-  for (const key in req.body) {
-    if(req.body[key] === "") delete req.body[key]
-  }
-  Flight.create(req.body)
+function show(req, res) {
+  Flight.findById(req.params.id)
   .then(flight => {
-    console.log(movie);
-    res.redirect("/flights")
+    res.render('flights/show', {
+      title: "Flight Detail",
+      flight: flight
+    })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/flights")
-  })
-}
+    res.redirect('/flights')
+    })
+  }
 
 export {
   index,
   newFlight as new,
   create,
+  show
 }

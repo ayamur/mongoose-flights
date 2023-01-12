@@ -1,21 +1,35 @@
 <main>
   <h1><%= title %></h1>
   <form id="new-form" action="/flights" method="POST">
-    <label for="airline-input">Airline:</label>
-    <input type="text" name="title" id="airline-input">
+    <label for="airline-select">Airline:</label>
+    <select name="airline" id="airline-select">
+      <option value="American">American Airlines</option>
+      <option value="Southwest">Southwest Airlines</option>
+      <option value="United">United Airlines</option>
+      <option value="Spaghetti">Flying Spaghetti Monster U.F.O.</option>
+      <option value="Styx">Oar of Styx Teleportations</option>
+      <option value="T.A.R.D.I.S.">Time and Relative Dimensions in Space</option>
+      <option value="Aranae">Aranae Translocation Warp</option>
+      <option value="Airpline">Airpline Airplane Airlines</option>
+    </select>
     <label for="flight-number-input">Flight Number:</label>
-    <input type="text" name="flightNumber" id="flight-number-input">
+    <input type="text" name="flightNo" id="flight-number-input">
     <label for="airport-select">Airport:</label>
-    <select name="airportSelect" id="airport-select">
-      <option value="475">HLS - Milky Way Galaxy Sun (Helios)</option>
-      <option value="6211">GN z11 - The Ursa Major Constellation Galaxy</option>
-      <option value="3616"> E616 - Planet Earth in Galaxy Milky Way 616</option>
-      <option value="11141">Valhalla - Hall of the Chosen Dead within Asgard</option>
-      <option value="4650">Hades - Dimension of the Greek Underworld</option>
-      <option value="4572">Tír na nÓg - Celtic Otherworld</option>
+    <select name="airport" id="airport-select">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+      <option value="HLS">HLS</option>
+      <option value="Z11">Z11</option>
+      <option value="616">616</option>
+      <option value="VLH">VLH</option>
+      <option value="HDS">HDS</option>
+      <option value="TIR">TIR</option>
     </select>
     <label for="departs-date-input">Departure Date:</label>
-    <input type="text" name="departs" id="departs-date-input" >
+    <input type="date" name="departs" id="departs-date-input" >
     <button type="submit">Add Flight</button>
   </form>
 </main>
