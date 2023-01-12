@@ -34,8 +34,8 @@ const flightSchema = new mongoose.Schema({
     },
     min: 2023,
     required: true,
-    tickets: [ticketSchema]
   },
+  tickets: [ticketSchema]
 }, {
   timestamps: true
 })
