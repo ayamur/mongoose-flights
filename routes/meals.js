@@ -9,7 +9,7 @@ const router = Router()
 router.get('/new', mealsCtrl.new)
 
 // POST localhost:3000/meals
-router.post("/", mealsCtrl.create)
+router.post('/', mealsCtrl.create)
 
 export {
   router

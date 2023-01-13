@@ -4,20 +4,23 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="/flights/<%= flight._id %>?_method=PUT"" method="POST">
-    <label for="airline-select">Airline:</label>
-    <select name="airline" id="airline-select" value="<%= flight.airline %>">
-      <option value="American">American Airlines</option>
-      <option value="Southwest">Southwest Airlines</option>
-      <option value="United">United Airlines</option>
-      <option value="Spaghetti">Flying Spaghetti Monster U.F.O.</option>
-      <option value="Styx">Oar of Styx Teleportations</option>
-      <option value="T.A.R.D.I.S.">Time and Relative Dimensions in Space</option>
-      <option value="Aranae">Aranae Translocation Warp</option>
-      <option value="Airpline">Airpline Airplane Airlines</option>
+  <form id="new-form" 
+  action="/flights/<%= flight._id %>?_method=PUT" 
+  method="POST"
+  >
+  <label for="airline-select">Airline:</label>
+  <select name="airline" id="airline-select" value="<%= flight.airline %>">
+    <option value="American">American Airlines</option>
+    <option value="Southwest">Southwest Airlines</option>
+    <option value="United">United Airlines</option>
+    <option value="Spaghetti">Flying Spaghetti Monster U.F.O.</option>
+    <option value="Styx">Oar of Styx Teleportations</option>
+    <option value="T.A.R.D.I.S.">Time and Relative Dimensions in Space</option>
+    <option value="Aranae">Aranae Translocation Warp</option>
+    <option value="Airpline">Airpline Airplane Airlines</option>
     </select>
     <label for="flight-number-input">Flight Number:</label>
-    <input type="text" name="flightNo" id="flight-number-input" value="<%= flight.flightNo %>">
+    <input type="number" name="flightNo" id="flight-number-input" value="<%= flight.flightNo %>">
     <label for="airport-select">Airport:</label>
     <select name="airport" id="airport-select" value="<%= flight.airport %>">
       <option value="AUS">AUS</option>

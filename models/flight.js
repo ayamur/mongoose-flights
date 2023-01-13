@@ -8,7 +8,7 @@ const ticketSchema = new Schema({
   price: 
   {type: Number, min: 0},
 }, {
-  timestamps: true,
+  timestamps: true
 })
 
 const flightSchema = new mongoose.Schema({
@@ -36,7 +36,7 @@ const flightSchema = new mongoose.Schema({
     required: true,
   },
   tickets: [ticketSchema],
-  meals: [{ type: Schema.Types.ObjectId, ref: 'Meal' }]
+  menu: [{ type: Schema.Types.ObjectId, ref: 'Meal' }]
 }, {
   timestamps: true
 })
